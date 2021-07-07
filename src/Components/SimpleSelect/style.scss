@@ -1,0 +1,42 @@
+.__simpleselect__select {
+  display: block;
+  width: 100%;
+}
+.__simpleselect__selectOptions {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  max-height: 200px;
+}
+
+.__simpleselect__selectOptions .__simpleselect__option {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.__simpleselect__selectOptions .__simpleselect__option {
+  &.__simpleselect__selected {
+    background-color: red;
+  }
+}
+
+.__simpleselect__noResults {
+  width: 100%;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.__simpleselect__selectInput {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
