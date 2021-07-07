@@ -1,14 +1,14 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
-import "Components/SimpleSelect/SimpleSelect.style.scss";
+import "components/SimpleSelect/SimpleSelect.style.scss";
 import { useOutsideClick } from "hooks/useOutsideClick";
 import { ReactComponent as Down } from "assets/icons/arrow-down.svg";
 
-const SimpleSelect = ({ options, placeholder, isSearch }) => {
+const SimpleSelect = ({ options, placeholder, isSearch, noResultsMessage }) => {
   const wrapperRef = useRef(null);
   useOutsideClick(wrapperRef, () => setIsVisible(false));
 
   const [value, setValue] = useState("");
-  const [inputPlaceholder, setInputPlaceholder] = useState(placeholder || "");
+  const [inputPlaceholder, setInputPlaceholder] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -34,12 +34,16 @@ const SimpleSelect = ({ options, placeholder, isSearch }) => {
       <div className="__simpleselect__inputWrapper">
         {isSearch ? (
           <input
+            type="text"
+            placeholder={placeholder}
             value={inputPlaceholder}
             className="__simpleselect__selectInput "
             onChange={(e) => handleSearch(e)}
           />
         ) : (
           <input
+            type="text"
+            placeholder={placeholder}
             value={inputPlaceholder}
             className="__simpleselect__selectInput __simpleselect__NoSearch"
             readOnly={true}
@@ -59,44 +63,60 @@ const SimpleSelect = ({ options, placeholder, isSearch }) => {
       </div>
 
       <div className="__simpleselect__selectOptions">
-        {search !== "" && isVisible ? (
+        {options?.length !== 0 ? (
           <Fragment>
-            {searchOptions.length !== 0 ? (
+            {search !== "" && isVisible ? (
               <Fragment>
-                {searchOptions?.map((item, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleSelect(item.value)}
-                    className={`__simpleselect__option ${
-                      item.value === value ? "selected" : ""
-                    }`}
-                  >
-                    {item.value}
-                  </div>
-                ))}
+                {searchOptions.length !== 0 ? (
+                  <Fragment>
+                    {searchOptions?.map((item, index) => (
+                      <div
+                        key={index}
+                        onClick={() => handleSelect(item.value)}
+                        className={`__simpleselect__option ${
+                          item.value === value ? "selected" : ""
+                        }`}
+                      >
+                        {item.value}
+                      </div>
+                    ))}
+                  </Fragment>
+                ) : (
+                  <Fragment>
+                    {isVisible ? (
+                      <div className="__simpleselect__noResults">
+                        {noResultsMessage || <span>No results</span>}
+                      </div>
+                    ) : null}
+                  </Fragment>
+                )}
               </Fragment>
             ) : (
-              <div className="__simpleselect__noResults">
-                <span>No results</span>
-              </div>
+              <Fragment>
+                {isVisible ? (
+                  <Fragment>
+                    {searchOptions?.map((item, index) => (
+                      <div
+                        key={index}
+                        onClick={() => handleSelect(item.value)}
+                        className={`__simpleselect__option ${
+                          item.value === value ? "selected" : ""
+                        }`}
+                      >
+                        {item.value}
+                      </div>
+                    ))}
+                  </Fragment>
+                ) : null}
+              </Fragment>
             )}
           </Fragment>
         ) : (
           <Fragment>
             {isVisible ? (
-              <Fragment>
-                {searchOptions?.map((item, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleSelect(item.value)}
-                    className={`__simpleselect__option ${
-                      item.value === value ? "selected" : ""
-                    }`}
-                  >
-                    {item.value}
-                  </div>
-                ))}
-              </Fragment>
+              <div className="__simpleselect__noResults">
+                {noResultsMessage || <span>No results</span>}
+              </div>
             ) : null}
           </Fragment>
         )}
