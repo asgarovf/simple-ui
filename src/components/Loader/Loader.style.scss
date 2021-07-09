@@ -1,0 +1,28 @@
+@import "/src/style/colors.scss";
+
+.__simple__loader {
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-radius: 50%;
+  margin: 0px;
+  animation: __simple__spin 1s linear infinite;
+  animation-timing-function: cubic-bezier(0.38, 0.65, 0.965, 0.85);
+}
+
+.__simple__loader.xs {
+  width: 16px;
+  height: 16px;
+}
+
+.__simple__loader.s {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes __simple__spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

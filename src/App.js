@@ -1,31 +1,22 @@
-import SimpleSelect from "components/SimpleSelect/SimpleSelect";
+import axios from "axios";
+import Loader from "components/Loader/Loader";
+import { useEffect, useState } from "react";
 import "style/global.scss";
 
-const options = [
-  { value: "option1" },
-  { value: "option2" },
-  { value: "option3" },
-  { value: "option5" },
-  { value: "option6" },
-  { value: "option7" },
-  { value: "option8" },
-  { value: "option9" },
-  { value: "option10" },
-];
+import { ReactComponent as Down } from "assets/icons/arrow/caret_down.svg";
 
 function App() {
-  const noresults = <span>hello</span>;
+  const [value, setValue] = useState("");
 
   return (
     <div className="App">
       <div style={{ width: "200px" }}>
-        <SimpleSelect
-          options={options}
-          placeholder="Hello"
-          isSearch
-          noResultsMessage={noresults}
-        />
+        <div style={{ marginTop: "2rem" }}>
+          <Loader className="lg" />
+          <span className="test"></span>
+        </div>
       </div>
+      <div></div>
     </div>
   );
 }

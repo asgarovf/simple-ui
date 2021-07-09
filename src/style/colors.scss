@@ -1,104 +1,88 @@
-////////////////////!Neutral Colors!/////////////////////
+//
 
-//Light
-$Neutral-Light-0: #ffffff;
-$Neutral-Light-1: #f9f9fa;
-$Neutral-Light-2: #f3f3f5;
-$Neutral-Light-3: #ecedf0;
-$Neutral-Light-4: #e6e7eb;
-$Neutral-Light-5: #e0e1e6;
-$Neutral-Light-6: #dadce0;
-$Neutral-Light-7: #d4d6db;
-$Neutral-Light-8: #cfd1d6;
-$Neutral-Light-9: #caccd1;
-$Neutral-Light-10: #c4c6cc;
-$Neutral-Light-11: #bfc1c7;
-$Neutral-Light-12: #babcc2;
-$Neutral-Light-13: #b5b7bd;
-$Neutral-Light-14: #afb2b8;
-$Neutral-Light-15: #aaadb3;
-$Neutral-Light-16: #a5a7ad;
+$BLACK: #000;
+$WHITE: #fff;
 
-//GREY
-$Neutral-Gray-0: #a0a2a8;
-$Neutral-Gray-1: #9b9da3;
-$Neutral-Gray-2: #96989e;
-$Neutral-Gray-3: #919399;
-$Neutral-Gray-4: #8c8e94;
-$Neutral-Gray-5: #87898f;
-$Neutral-Gray-6: #82848a;
-$Neutral-Gray-7: #7e7f85;
-$Neutral-Gray-8: #797a80;
-$Neutral-Gray-9: #74767a;
-$Neutral-Gray-10: #6f7175;
-$Neutral-Gray-11: #6a6c70;
-$Neutral-Gray-12: #65676b;
-$Neutral-Gray-13: #606266;
-$Neutral-Gray-14: #5c5d61;
-$Neutral-Gray-15: #57585c;
-$Neutral-Gray-16: #525357;
+//GRAY
+$GRAY50: #f9fafb;
+$GRAY100: #f3f4f6;
+$GRAY200: #e5e7eb;
+$GRAY300: #d1d5db;
+$GRAY400: #9ca3af;
+$GRAY500: #6b7280;
+$GRAY600: #4b5563;
+$GRAY700: #374151;
+$GRAY800: #1f2937;
+$GRAY900: #111827;
 
-//Dark
-$Neutral-Dark-0: #4d4e52;
-$Neutral-Dark-1: #484a4d;
-$Neutral-Dark-2: #444547;
-$Neutral-Dark-3: #3f4042;
-$Neutral-Dark-4: #3a3b3d;
-$Neutral-Dark-5: #363638;
-$Neutral-Dark-6: #313133;
-$Neutral-Dark-7: #2c2d2e;
-$Neutral-Dark-8: #272829;
-$Neutral-Dark-9: #232324;
-$Neutral-Dark-10: #1e1e1f;
-$Neutral-Dark-11: #19191a;
-$Neutral-Dark-12: #141414;
-$Neutral-Dark-13: #0f0f0f;
-$Neutral-Dark-14: #0f0f0f;
-$Neutral-Dark-15: #0a0a0a;
-$Neutral-Dark-16: #000000;
+//RED
+$RED50: #fef2f2;
+$RED100: #fee2e2;
+$RED200: #fecaca;
+$RED300: #fca5a5;
+$RED400: #f87171;
+$RED500: #ef4444;
+$RED600: #dc2626;
+$RED700: #b91c1c;
+$RED800: #991b1b;
+$RED900: #7f1d1d;
 
-////////////////////!Palette!/////////////////////
+//YELLOW
+$YELLOW50: #fffbeb;
+$YELLOW100: #fef3c7;
+$YELLOW200: #fde68a;
+$YELLOW300: #fcd34d;
+$YELLOW400: #fbbf24;
+$YELLOW500: #f59e0b;
+$YELLOW600: #d97706;
+$YELLOW700: #b45309;
+$YELLOW800: #92400e;
+$YELLOW900: #78350f;
 
-//Blue
-$Blue-90: #f5faff;
-$Blue-80: #c4e3fd;
-$Blue-70: #93ccfa;
-$Blue-60: #62b5f8;
-$Blue-50: #329ef6;
-$Blue-40: #0a86eb;
-$Blue-30: #086aba;
-$Blue-20: #064e89;
-$Blue-10: #043258;
+//GREEN
+$GREEN50: #ecfdf5;
+$GREEN100: #d1fae5;
+$GREEN200: #a7f3d0;
+$GREEN300: #6ee7b7;
+$GREEN400: #34d399;
+$GREEN500: #10b981;
+$GREEN600: #059669;
+$GREEN700: #047857;
+$GREEN800: #065f46;
+$GREEN900: #064e3b;
 
-//Red
-$Red-90: #fef6f6;
-$Red-80: #fac7c7;
-$Red-70: #f59999;
-$Red-60: #f06a6a;
-$Red-50: #ec3c3c;
-$Red-40: #df1616;
-$Red-30: #b01111;
-$Red-20: #820d0d;
-$Red-10: #540808;
+//BLUE
+$BLUE50: #eff6ff;
+$BLUE100: #dbeafe;
+$BLUE200: #bfdbfe;
+$BLUE300: #93c5fd;
+$BLUE400: #60a5fa;
+$BLUE500: #3b82f6;
+$BLUE600: #2563eb;
+$BLUE700: #1d4ed8;
+$BLUE800: #1e40af;
+$BLUE900: #1e3a8a;
 
-//Green
-$Green-90: #f7fcf9;
-$Green-80: #d1f0dd;
-$Green-70: #abe3c0;
-$Green-60: #85d6a4;
-$Green-50: #5dc986;
-$Green-40: #3db86c;
-$Green-30: #309155;
-$Green-20: #246b3f;
-$Green-10: #174528;
+//PURPLE
+$PURPLE50: #f5f3ff;
+$PURPLE100: #ede9fe;
+$PURPLE200: #ddd6fe;
+$PURPLE300: #c4b5fd;
+$PURPLE400: #a78bfa;
+$PURPLE500: #8b5cf6;
+$PURPLE600: #7c3aed;
+$PURPLE700: #6d28d9;
+$PURPLE800: #5b21b6;
+$PURPLE900: #4c1d95;
 
-//Yellow
-$Yellow-90: #fefcf6;
-$Yellow-80: #faeec7;
-$Yellow-70: #f5e199;
-$Yellow-60: #f0d36a;
-$Yellow-50: #ecc53c;
-$Yellow-40: #dfb316;
-$Yellow-30: #b08d11;
-$Yellow-20: #82680d;
-$Yellow-10: #544308;
+//PINK
+$PINK50: #fdf2f8;
+$PINK100: #fce7f3;
+$PINK200: #fbcfe8;
+$PINK300: #f9a8d4;
+$PINK400: #f472b6;
+$PINK500: #ec4899;
+$PINK600: #db2777;
+$PINK700: #be185d;
+$PINK800: #9d174d;
+$PINK900: #831843;
